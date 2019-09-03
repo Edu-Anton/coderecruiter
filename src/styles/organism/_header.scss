@@ -1,0 +1,18 @@
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 30px;
+	padding-right: 30px;
+	height: 70px;
+
+	&__logo {
+		width: 200px;
+	}
+
+	&__icon {
+		margin-left: 12px;
+	}
+
+}

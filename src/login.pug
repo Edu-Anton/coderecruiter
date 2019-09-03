@@ -1,0 +1,27 @@
+extends pug/templates/template.pug
+
+block content 
+  main(class="login main-web")
+    h1(class="form__title") Login
+    div(class="form__content__text")
+      p(class="form__text form__text--login") ¡Bienvenido!
+      p(class="form__text form__text--login") Por favor, ingrese sus datos
+    
+    form(class="form" action="#")
+      div(class="form__group")
+        label(class="form__label" for="user") Usuario
+        input(class="form__input" type="text")
+      
+      div(class="form__group")
+        label(class="form__label" for="password") Password
+        input(class="form__input" type="password")
+      
+      div(class="form__group u-flex--center--space-between")
+        span
+          input(type="checkbox" name="" id="recordar")
+          label(class="form__label" for="recordar") Recordar
+        a(class="form__link" href="./dashboard.pug") ¿Olvidaste tu contraseña?
+
+      button(class="form__btn" type="submit") Login
+      p(class="text-sm") ¿No tienes una cuenta? 
+        a(class="form__link" href="register.pug") Registrate aquí

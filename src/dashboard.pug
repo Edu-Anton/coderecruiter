@@ -1,0 +1,32 @@
+extends pug/templates/templatedashboard.pug
+
+block config
+  - var section = "App"
+
+block scripts 
+  script(src="./scripts/dashboard.js")
+
+block content
+  div(class="card__group")
+    div(class="card__container")
+      div(class="card")
+        div(class="card__side card__front")
+          i(class="fas fa-arrow-right card__arrow--right" id="card__arrow--right")
+          figure
+            img(class="card__img" src="/img/connors.png" alt="")
+          p(class="card__name") Roxana Connors
+          p(class="card__job") Full stack developer
+          p(class="card__phone")  
+            i(class="fas fa-phone-volume") 
+            | 01-923-085975
+          hr(class="card__line")
+          div(class="card__social")
+            i(class="fab fa-facebook-square")
+            i(class="fab fa-twitter")
+            i(class="fab fa-github-alt")
+            i(class="fab fa-linkedin")
+            i(class="fab fa-codepen")          
+
+        div(class="card__side card__back")
+          p Hola, mi nombre es Roxana Connors, soy full stack developer y si quieres saber más sobre mis habilidades te invito a ver mi perfil
+          a(class="card__btn" href="./perfil.pug") Ver perfil

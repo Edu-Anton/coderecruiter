@@ -1,0 +1,93 @@
+extends pug/templates/template.pug 
+
+block scripts 
+  script(src="./scripts/register.js")
+
+block content
+  main(class="login main-web")
+    h1(class="form__title") Regístrate
+    form(class="form form__register" id="form_register" action="#")
+      
+      div(class="form__content__text")
+        h3(class="form__text") Datos personales
+        p(class="form__text") Por favor, complete sus datos
+      
+      div(class="form__group form__w-50")
+        label(class="form__label" for="user" required) Nombre
+        input(class="form__input" id="reg_name" type="text")
+      
+      div(class="form__group form__w-50")
+        label(class="form__label" for="text") Apellidos
+        input(class="form__input" id="reg_lastname" type="text")
+      
+      div(class="form__group form__w-50")
+        label(class="form__label" for="text") Teléfono celular
+        input(class="form__input" id="reg_phone" type="text")
+      
+      div(class="form__group form__w-50")
+        label(class="form__label" for="text") Dirección
+        input(class="form__input" type="text")
+      
+      div(class="form__group")
+        label(class="form__label" for="text") Sexo
+        div(class="form__radio-container")
+          label(class="form__tag-radiobtn" for="female") F
+            input(class="form__radio" type="radio" id="female" name="gender" value="woman")
+          span(class="form__tag-radiobtn") M
+            input(class="form__radio" type="radio"
+            id="male" name="gender" value="man")
+
+      div(class="form__group form__w-50")
+        label(class="form__label" for="text") Usuario
+        input(class="form__input" id="reg_user" type="text" )
+      
+      div(class="form__group form__w-50")
+        label(class="form__label" for="text") Contraseña
+        input(class="form__input" type="password" id="reg_password")
+      
+      div(class="form__group")
+        label(class="form__label" for="text") Correo Electrónico
+        input(class="form__input" id="reg_mail" type="email")
+      
+      div(class="form__content__text")
+        h3(class="form__text") Datos de la carrera
+        p(class="form__text") Por favor, completa tus datos
+
+      div(class="form__group form__w-50")
+        label(class="form__label" for="text") Especialidad
+        select(class="form__input" name="" id="specialty")
+          option(value="") -- Seleccionar opción --
+          option(value="Full Stack Developer") Full Stack Developer
+          option(value="Front End Developer") Front End Developer
+          option(value="Back End Developer") Back End Developer
+        
+      div(class="form__group")
+        label(class="form__label" for="text") Cuéntanos sobre tí:
+        textarea(class="form__input" id="description" name="" cols="30" rows="10")
+      
+      div(class="form__content__text")
+        h3(class="form__text") Redes Sociales
+        p(class="form__text") Por favor, completa tus datos
+      
+      div(class="form__group")
+        label(class="form__label" for="text") Facebook
+        input(class="form__input" id="reg_facebook" type="text")
+      
+      div(class="form__group")
+        label(class="form__label" for="text") Twitter
+        input(class="form__input" id="reg_twitter" type="text")
+      
+      div(class="form__group")
+        label(class="form__label" for="text") Github
+        input(class="form__input" id="reg_github" type="text")
+      
+      div(class="form__group")
+        label(class="form__label" for="text") Linkedin
+        input(class="form__input" id="reg_linkedin"  type="text")
+      
+      div(class="form__group")
+        label(class="form__label" for="text") Codepen
+        input(class="form__input" id="reg_codepen" type="text")
+      
+      button(class="form__btn" type="submit") Register
+    

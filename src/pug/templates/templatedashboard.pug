@@ -1,0 +1,33 @@
+block config
+
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible" content="ie=edge")
+  title CodeRecruiter
+  link(rel="shortcut icon" href="./img/favicon.ico")
+  script(src="https://kit.fontawesome.com/a631fbff5c.js")
+  block headLinks 
+    link(href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500,700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="./styles/main.scss")
+
+body
+
+  header(class="header")
+    include ../partials/header.pug
+
+  div(class="app__container")
+    include ../partials/sidebar.pug
+       
+    main(class="app__main")
+      block content
+
+  include ../partials/footer.pug  
+
+  block scripts 
+    script(src="./dashboard.js")
+  
+
+  

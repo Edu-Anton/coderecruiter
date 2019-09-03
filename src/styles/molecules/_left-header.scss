@@ -1,0 +1,18 @@
+.left-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 190px;
+  
+  .js_sidebar {
+    cursor: pointer;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    width: 230px;
+  }
+}

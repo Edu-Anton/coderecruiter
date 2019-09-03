@@ -1,0 +1,30 @@
+.btn {
+	&--hero {
+		background-color: var(--primary-color);
+		color: var(--neutral-white);
+		padding: 20px 45px;
+		border-radius: 25px;
+		font-weight: 700;
+		margin-top: 20px;
+		display: inline-block;
+	}
+
+	&--sm {
+		padding: 7px 20px;
+		margin-right: 14px;
+		margin-bottom: 15px;
+		border-radius: 4px;
+		border: 0;
+	}
+
+	&--primary {
+		color: #fff;
+		background-color: var(--primary-color);
+	}
+
+	&--secondary {
+		color: #fff;
+		background-color: var(--secondary-color);
+	}
+}
+

@@ -1,0 +1,40 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 43px;
+  color:#0d3964;
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 500;
+}
+
+.main-web {
+  align-self: center;
+  flex-grow: 1;
+}
+
+.index {
+  width: 960px;
+}
+
+.specialist {
+  width: 80%;
+  h2 {
+      font-size: 38px;
+      font-weight: 500;
+      color:#0d3964;
+  }
+  .logos {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 40px;
+  }
+  &__logo {
+      height: 40px;
+      margin-left: 30px;
+      margin-bottom: 40px;
+  }
+}

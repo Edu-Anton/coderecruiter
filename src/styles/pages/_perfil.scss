@@ -1,0 +1,51 @@
+.perfil {
+  &__header {
+    display: flex;
+  }
+
+  &__figure {
+    width: 135px;
+    margin: 20px 20px 0 0;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 36px;
+    color: var(--font-color)
+  }
+
+  &__subtitle {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+    margin-top: 5px;
+  }
+}
+
+.portfolio__article {
+  border-bottom: 1px solid #999;
+}
+
+.media {
+  display: flex;
+  
+  img {
+    width: 120px;
+  }
+
+  &__title {
+    color: var(--neutral-dark-grey)
+  }
+}
+

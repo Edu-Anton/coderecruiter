@@ -1,0 +1,41 @@
+.app {
+  
+  &__container {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    // max-width: 1200px;
+    border: 1px solid var(--neutral-light-grey);
+  }
+
+  &__sidebar {
+    width: 190px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--neutral-light-grey);
+    padding: 20px;
+    position: absolute;
+    left: -190px;
+    height: 100%;
+    background-color: #fff;
+    transition: all .5s;
+
+    .show-sidebar & {
+      left: 0;
+    }
+    
+    @media (min-width: 992px) {
+      position: relative;
+      left: 0;
+      height: inherit;
+    }
+    
+    @media (min-width: 1200px) {
+      width: 230px;
+    }
+  }
+
+  &__main {
+    padding: 20px;
+    width: 100%;
+  }
+}

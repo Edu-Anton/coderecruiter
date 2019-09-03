@@ -1,0 +1,81 @@
+extends pug/templates/templatedashboard.pug
+
+block config
+  - var section = "App"
+
+block scripts 
+  script(src="./scripts/dashboard.js")
+
+block content
+  .perfil 
+    span.txt--sm Dashboard >
+    span(class="txt--sm txt--primary")  Perfil
+
+    .perfil__header
+      figure.perfil__figure
+        img(class="perfil__img" src="./img/connors.png" alt="")
+      .perfil__header__content 
+        h1.perfil__title Roxana Connors
+        p.perfil__subtitle Full Stack Developer 
+        p.perfil__subtitle 
+          i(class="fas fa-phone-volume") 
+          |  999-999999
+        div(class="perfil__social")
+          i(class="fab fa-facebook-square")
+          i(class="fab fa-twitter")
+          i(class="fab fa-github-alt")
+          i(class="fab fa-linkedin")
+          i(class="fab fa-codepen")
+
+    p Hola Mi nombre es Roxanna Connors, soy full stack developer. Mis hobbies son escribir codigo mantenible y crear proyectos retadores, me gusta todo lo referente a interfaz de usuario, programacion y crear productos con una gran experiencia de usuario. Cuento con experiencia en desarrollos responsive, pwa, y sistemas basados en spa. Tengo una diplomatura en ciencias politicas pero me dedico a la programacion porque me parecio algo muy interesante y lo quise aprender para complementar mis conocimientos ya que en el mundo actual todo se basa en tecnologia.
+
+    .skills
+      h2 Skills  
+      each skill in skills 
+        button.btn--sm.btn--primary= skill 
+      
+      
+
+    .portfolio
+      h2 Portfolio 
+      
+      article.portfolio__article
+        .media
+          figure
+            img(src="./img/dogshop.png", alt="imagen")
+          .media__content
+            h3.media__title Dog Shop
+            p En esta pagina le dimos foco al trabajo de html semantico, etiquetas orientadas a seo, estructuracion de html y entendimiento de pilares (html, css, js). Aprendimos sobre css y vimos temas basicos de js sobre seleccion de elementos y manipulacion del DOM. 
+        p.txt--sm Aprendimos:
+        
+        -var dogShop = ['HTML5', 'CSS3', 'FLEXBOX'];
+        each item in dogShop 
+          button.btn--sm.btn--secondary= item
+      
+      article.portfolio__article
+        .media
+          figure
+            img(src="./img/elveraz.png", alt="imagen")
+          .media__content
+            h3.media__title El Veraz
+            p En esta pagina reforzamos los temas de semantica, css, flexbox, y vimos responsive web design, tambien creamos un mailing y aprendimos a utilizar la plataforma mailchimp para testear nuestros mailings. Utilizamos jquery, para instalar plugins y pudimos crear algunos archivos en sass,configurar gulp; Tambien instalamos node js y aprendimos sobre npm y como crear un proyecto con este y como instalar paquetes desde npm.
+        p.txt--sm Aprendimos:
+        -var elveraz = ['HTML5', 'CSS3', 'FLEXBOX', 'NPM', 'NODEJS',  'MAILINGS', 'SASS', 'GULP', 'MAILCHIMP'];
+        each skill in elveraz 
+          button.btn--sm.btn--secondary= skill
+      
+      article.portfolio__article
+        .media
+          figure
+            img(src="./img/coderecruiter.png", alt="imagen")
+          .media__content
+            h3.media__title CodeRecruiter
+            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque officia provident modi perspiciatis sit laudantium blanditiis adipisci consequuntur assumenda explicabo harum delectus, necessitatibus qui cumque quidem sapiente, at mollitia non!
+        p.txt--sm Aprendimos:
+        each skill in coderecruiter 
+          button.btn--sm.btn--secondary= skill
+      
+
+
+
+    

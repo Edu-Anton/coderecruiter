@@ -1,0 +1,31 @@
+{
+  "name": "coderecruiter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edu-Anton/coderecruiter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edu-Anton/coderecruiter/issues"
+  },
+  "homepage": "https://github.com/Edu-Anton/coderecruiter#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "pug": "^2.0.4",
+    "sass": "^1.22.10"
+  },
+  "dependencies": {
+    "d": "^1.0.1",
+    "da": "0.0.3",
+    "dat": "^13.13.1"
+  }
+}
