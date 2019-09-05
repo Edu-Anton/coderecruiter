@@ -1,19 +1,17 @@
-import {Developer} from './developer'
+import {Developer} from './model/Developer'
 
 let formRegister = document.getElementById('form_register')
 let regName = document.getElementById('reg_name')
 
-console.log(regName)
-
 formRegister.addEventListener('submit', (e) => {
   e.preventDefault();
   addDeveloper();
+  alert('prueba')
 })
 
 regName.addEventListener('keypress', (e)=>{
   e.preventDefault()
   if(e.which === 13) {
-
     chargeForm()
   }
 })
@@ -56,7 +54,7 @@ function addDeveloper(){
 
   let newDev = new Developer(name, lastName, gender, specialty) 
   
-  return newDev
   console.log(newDev)
+  return newDev
 
 }

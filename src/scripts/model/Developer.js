@@ -66,7 +66,5 @@ export class Developer {
     return `https://codepen.io/${this.name}.${this.lastName}/pen`
   }
 
-}
+};
 
-// let eduardo = new Developer('Eduardo', 'Calderón')
-// console.log(eduardo)

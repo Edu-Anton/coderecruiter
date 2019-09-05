@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.pug",
-    "build": "parcel build src/index.pug"
+    "build": "parcel build src/index.pug",
+    "json:server": "json-server db.json --routes routes.json --watch  "
   },
   "repository": {
     "type": "git",

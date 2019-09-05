@@ -1,29 +1,37 @@
-import {developers} from './db.js';
-import {cardGroup} from './global.js';
+
+
+// import {cardGroup} from './global.js';
 // import connors from "./img/connors.png";
 // import connors from '../img/connors.png'
 // import('/perfil.pug')
 
-const renderAllCards = (() => {
-  developers.forEach((developer, index) => {
+
+const findAll = fetch('http://localhost:3000/devs')
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    renderAllCards(data)
+  })
+
+function renderAllCards (findAll) {
+  findAll.forEach((developer, index) => {
     renderCard(developer, index)
   })
-  // console.log(developers)
-})()
+}
 
 function renderCard (dev, index) {
-  console.log(dev)
+  // console.log(dev)
   let card = document.createElement('div')
   card.className = "card__container"
   let attr = document.createAttribute("data-index")
-  attr.value = index
+  attr.value = index + 1
   card.setAttributeNode(attr)
   card.innerHTML = `
       <div class="card">
         <div class="card__side card__front">
           <i class="fas fa-arrow-right card__arrow--right" id="card__arrow--right"></i>
           <figure>
-            <img class="card__img" src="./connors.png" alt="">
+            <img class="card__img" src="eduardo" alt="">
           </figure>
           <p class="card__name">${dev.name} ${dev.lastName}</p>
           <p class="card__job">${dev.specialty}</p>
@@ -40,10 +48,11 @@ function renderCard (dev, index) {
         </div>
         <div class="card__side card__back">
           <p>${dev.shortDescription}</p>
-          <a class="card__btn" href="perfil.html">Ver perfil</a>
+          <a id="id-${index +1}" class="card__btn"  href="#">Ver perfil</a>
         </div>
       </div>
   `
+  const cardGroup = document.querySelector('.card__group');
   cardGroup.appendChild(card) 
   
 }
