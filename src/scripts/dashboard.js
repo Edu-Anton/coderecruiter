@@ -2,7 +2,8 @@ import {Developer} from './model/Developer.js'
 import {renderAllCards, renderCard} from './view/render.js'
 import {cardTurn, prueba} from './controller/events.js'
 
-
+let devjob = {job: "React Developer"}
+let jobname = "Angular developer"
 
 const cardGroup = document.querySelector(".card__group");
 const arrowRight = document.querySelector(".card__arrow--right");

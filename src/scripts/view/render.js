@@ -13,6 +13,12 @@ const findAll = fetch('http://localhost:3000/devs')
     renderAllCards(data)
   })
 
+const getDev = fetch('http://localhost:3000/devs/1')
+  .then(res => res.json())
+  .then(data => {
+    
+  })
+
 function renderAllCards (findAll) {
   findAll.forEach((developer, index) => {
     renderCard(developer, index)
