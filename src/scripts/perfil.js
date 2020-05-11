@@ -1,3 +1,8 @@
+// import {cardTurn, prueba} from './controller/events.js'
+// prueba()
+import {prueba2} from './components/card'
+
+
 let param = location.search;
 let id = param.substr(4)
 
@@ -6,11 +11,14 @@ const getDeveloper = fetch(`http://localhost:3000/devs/${id}`)
   .then(developer => {
     renderTemplate(developer)
     // return developer
+    prueba2('Eduardo')
   })
-  .catch('error')  
+  .catch(error)  
+
+getDeveloper()
 
 const renderTemplate = (developer) => {
-  let devTemplate = createPerfilTemplate(developer)  
+  let devTemplate = createPerfilTemplate2(developer)  
   let perfil = document.getElementById('perfil')
   perfil.innerHTML = devTemplate
 } 

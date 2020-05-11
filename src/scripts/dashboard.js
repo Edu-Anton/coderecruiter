@@ -1,12 +1,14 @@
 import {Developer} from './model/Developer.js'
-import {renderAllCards, renderCard} from './view/render.js'
+import {renderAllCards, renderCard} from './view/render'
 import {cardTurn, prueba} from './controller/events.js'
+prueba()
 
 let devjob = {job: "React Developer"}
 let jobname = "Angular developer"
 
 const cardGroup = document.querySelector(".card__group");
 const arrowRight = document.querySelector(".card__arrow--right");
+
 
 cardGroup.addEventListener("click", function(e) {
   e.stopPropagation()
