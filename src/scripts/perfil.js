@@ -1,6 +1,7 @@
 // import {cardTurn, prueba} from './controller/events.js'
 // prueba()
-import {prueba2} from './components/card'
+// import {prueba2} from './components/card'
+import imgEdu from '../img/eduardo.jpg'
 
 
 let param = location.search;
@@ -11,14 +12,12 @@ const getDeveloper = fetch(`http://localhost:3000/devs/${id}`)
   .then(developer => {
     renderTemplate(developer)
     // return developer
-    prueba2('Eduardo')
+    // prueba2('Eduardo')
   })
-  .catch(error)  
-
-getDeveloper()
+  // .catch(e => console.log(e))  
 
 const renderTemplate = (developer) => {
-  let devTemplate = createPerfilTemplate2(developer)  
+  let devTemplate = createPerfilTemplate(developer)  
   let perfil = document.getElementById('perfil')
   perfil.innerHTML = devTemplate
 } 
@@ -29,7 +28,7 @@ const createPerfilTemplate = (user) => {
         <span class="txt--sm txt--primary"> Perfil</span>
         <div class="perfil__header">
           <figure class="perfil__figure">
-            <img class="perfil__img" src="/eduardo.jpg" alt="">
+            <img class="perfil__img card__img" src="${imgEdu}" alt="">
           </figure>
           <div class="perfil__header__content">
             <h1 class="perfil__title">${user.name} ${user.lastName}</h1>
